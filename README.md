@@ -1,6 +1,6 @@
-# <img src="GUI/Resources/img/hangman_icon_256.png" alt="Add Word menu" width="20" />&nbsp;&nbsp;C++ Hangman Game
+# C++ Hangman Game
 
-[GitHub Repository](https://github.com/Dmitry_kitty/HangMan)
+[GitHub Repository](git@github.com:dmitrykitty/HangMan.git)
 
 Hangman is a classic word-guessing 
 [game](https://simple.wikipedia.org/wiki/Hangman#:~:text=Hangman%20is%20a%20paper%20,76%20used%20for%20counting).
@@ -104,19 +104,18 @@ If you add a custom word, it’s stored in the database with `word_type='user'`.
 ## Game process:
 <img src="readme_assets/main_menu.png" alt="Main menu" width="400" />
 
-*The main menu of the Hangman game 
-(custom GUI with Start Game, Settings, About, Exit)*
+*The main menu of the Hangman game (custom GUI with Start, Settings, About, Exit). 
+The game’s title is shown along with the hangman gallows drawing.*
 
-<img src="readme_assets/game_page.png" alt="Game menu" width="400" />
+<img src="readme_assets/game_page.png" alt="Main menu" width="400" />
 
-*Gameplay view: hangman drawing, difficulty & attempts panel with hint and 
-“Show Definition”, plus an on-screen keyboard where used letters are dimmed.*
+*Gameplay view: hangman drawing, difficulty & attempts panel with hint and “Show Definition”, 
+plus an on-screen keyboard where used letters are dimmed.*
 
-<img src="readme_assets/add_word_menu.png" alt="Add Word menu" width="400" />
+<img src="readme_assets/add_word_menu.png" alt="Main menu" width="400" />
 
-*“Add Custom Word” dialog with fields for word, definition, difficulty 
-(Easy / Medium / Hard) and Cancel / Add buttons.*
-
+*“Add Custom Word” dialog with fields for word, definition, difficulty (Easy / Medium / Hard) 
+and Cancel / Add buttons.*
 
 ## Building and Running:
 1. **Qt Creator:** Open the folder HangMan in Qt Creator (which will detect the `CMakeLists.txt`). 
