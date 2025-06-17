@@ -1,6 +1,6 @@
 # C++ Hangman Game
 
-[GitHub Repository](git@github.com:dmitrykitty/HangMan.git)
+[GitHub Repository](https://github.com/dmitrykitty/HangMan)
 
 Hangman is a classic word-guessing 
 [game](https://simple.wikipedia.org/wiki/Hangman#:~:text=Hangman%20is%20a%20paper%20,76%20used%20for%20counting).
