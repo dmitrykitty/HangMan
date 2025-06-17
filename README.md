@@ -1,6 +1,6 @@
-# C++ Hangman Game
+# <img src="GUI/Resources/img/hangman_icon_256.png" alt="Add Word menu" width="20" />&nbsp;&nbsp;C++ Hangman Game
 
-[GitHub Repository](https://github.com/Dmitry_kitty/MyString)
+[GitHub Repository](https://github.com/Dmitry_kitty/HangMan)
 
 Hangman is a classic word-guessing 
 [game](https://simple.wikipedia.org/wiki/Hangman#:~:text=Hangman%20is%20a%20paper%20,76%20used%20for%20counting).
