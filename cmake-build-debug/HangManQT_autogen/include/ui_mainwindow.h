@@ -34,12 +34,6 @@ public:
     QWidget *centralwidget;
     QStackedWidget *stackedWidget;
     QWidget *pageMenu;
-    QGridLayout *gridLayout;
-    QVBoxLayout *verticalLayout_6;
-    QHBoxLayout *horizontalLayout_9;
-    QSpacerItem *horizontalSpacer_8;
-    QLabel *pictureMain;
-    QSpacerItem *horizontalSpacer_9;
     QWidget *widget_3;
     QHBoxLayout *horizontalLayout_8;
     QSpacerItem *horizontalSpacer_6;
@@ -49,6 +43,7 @@ public:
     QPushButton *buttonaAbout;
     QPushButton *buttonExit;
     QSpacerItem *horizontalSpacer_7;
+    QLabel *pictureMain;
     QWidget *pageGame;
     QWidget *keyboardWidget;
     QGridLayout *gridLayout_3;
@@ -79,22 +74,13 @@ public:
     QPushButton *buttonX;
     QPushButton *buttonJ;
     QPushButton *button_;
-    QWidget *layoutWidget;
-    QHBoxLayout *horizontalLayout_3;
-    QVBoxLayout *verticalLayout_5;
-    QLabel *pictureGame;
-    QSpacerItem *verticalSpacer;
-    QVBoxLayout *verticalLayout_4;
-    QHBoxLayout *horizontalLayout_4;
-    QSpacerItem *horizontalSpacer_4;
-    QPushButton *buttonPause;
+    QLabel *labelWordMask;
     QWidget *widget;
-    QVBoxLayout *verticalLayout_3;
     QLabel *labelCurrentDifficulty;
     QLabel *labelAttemptsLeft;
-    QSpacerItem *verticalSpacer_2;
+    QWidget *widget1;
+    QVBoxLayout *verticalLayout_3;
     QLabel *labelDefinition;
-    QSpacerItem *verticalSpacer_3;
     QHBoxLayout *horizontalLayout_2;
     QSpacerItem *horizontalSpacer;
     QSpacerItem *horizontalSpacer_3;
@@ -103,20 +89,18 @@ public:
     QPushButton *buttonBackToMenu;
     QSpacerItem *horizontalSpacer_2;
     QPushButton *buttonNewGame;
-    QLabel *labelWordMask;
+    QLabel *pictureGame;
+    QPushButton *buttonPause;
     QWidget *pageAbout;
     QGroupBox *groupBox;
     QLabel *label;
     QWidget *pageSettings;
-    QWidget *layoutWidget1;
+    QWidget *layoutWidget;
     QVBoxLayout *verticalLayout;
     QPushButton *buttonDifficulty;
     QPushButton *buttonAddWord;
     QPushButton *buttonResetDict;
-    QWidget *layoutWidget2;
-    QHBoxLayout *horizontalLayout_5;
     QPushButton *buttonBack;
-    QSpacerItem *horizontalSpacer_5;
     QMenuBar *menubar;
     QMenu *menuhangman;
     QStatusBar *statusbar;
@@ -125,14 +109,14 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
-        MainWindow->resize(1000, 780);
+        MainWindow->resize(1000, 840);
         QSizePolicy sizePolicy(QSizePolicy::Policy::Fixed, QSizePolicy::Policy::Fixed);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(MainWindow->sizePolicy().hasHeightForWidth());
         MainWindow->setSizePolicy(sizePolicy);
-        MainWindow->setMinimumSize(QSize(1000, 780));
-        MainWindow->setMaximumSize(QSize(1000, 780));
+        MainWindow->setMinimumSize(QSize(1000, 840));
+        MainWindow->setMaximumSize(QSize(1000, 840));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
         QSizePolicy sizePolicy1(QSizePolicy::Policy::Preferred, QSizePolicy::Policy::Preferred);
@@ -143,50 +127,15 @@ public:
         centralwidget->setMinimumSize(QSize(480, 720));
         stackedWidget = new QStackedWidget(centralwidget);
         stackedWidget->setObjectName("stackedWidget");
-        stackedWidget->setGeometry(QRect(10, 60, 971, 681));
+        stackedWidget->setGeometry(QRect(10, 50, 971, 751));
         pageMenu = new QWidget();
         pageMenu->setObjectName("pageMenu");
         pageMenu->setEnabled(true);
         sizePolicy1.setHeightForWidth(pageMenu->sizePolicy().hasHeightForWidth());
         pageMenu->setSizePolicy(sizePolicy1);
-        gridLayout = new QGridLayout(pageMenu);
-        gridLayout->setObjectName("gridLayout");
-        verticalLayout_6 = new QVBoxLayout();
-        verticalLayout_6->setObjectName("verticalLayout_6");
-        horizontalLayout_9 = new QHBoxLayout();
-        horizontalLayout_9->setObjectName("horizontalLayout_9");
-        horizontalLayout_9->setContentsMargins(-1, -1, -1, 20);
-        horizontalSpacer_8 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
-
-        horizontalLayout_9->addItem(horizontalSpacer_8);
-
-        pictureMain = new QLabel(pageMenu);
-        pictureMain->setObjectName("pictureMain");
-        pictureMain->setEnabled(true);
-        sizePolicy.setHeightForWidth(pictureMain->sizePolicy().hasHeightForWidth());
-        pictureMain->setSizePolicy(sizePolicy);
-        pictureMain->setMinimumSize(QSize(480, 380));
-        pictureMain->setMaximumSize(QSize(480, 360));
-        QFont font;
-        font.setFamilies({QString::fromUtf8("Comic Sans MS")});
-        font.setPointSize(48);
-        font.setBold(true);
-        pictureMain->setFont(font);
-        pictureMain->setToolTipDuration(-1);
-        pictureMain->setLayoutDirection(Qt::LayoutDirection::LeftToRight);
-        pictureMain->setAlignment(Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignTop);
-
-        horizontalLayout_9->addWidget(pictureMain);
-
-        horizontalSpacer_9 = new QSpacerItem(150, 20, QSizePolicy::Policy::Fixed, QSizePolicy::Policy::Minimum);
-
-        horizontalLayout_9->addItem(horizontalSpacer_9);
-
-
-        verticalLayout_6->addLayout(horizontalLayout_9);
-
         widget_3 = new QWidget(pageMenu);
         widget_3->setObjectName("widget_3");
+        widget_3->setGeometry(QRect(20, 410, 941, 311));
         horizontalLayout_8 = new QHBoxLayout(widget_3);
         horizontalLayout_8->setObjectName("horizontalLayout_8");
         horizontalSpacer_6 = new QSpacerItem(302, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
@@ -202,11 +151,11 @@ public:
         sizePolicy1.setHeightForWidth(buttonStart->sizePolicy().hasHeightForWidth());
         buttonStart->setSizePolicy(sizePolicy1);
         buttonStart->setMinimumSize(QSize(300, 0));
-        QFont font1;
-        font1.setFamilies({QString::fromUtf8("Comic Sans MS")});
-        font1.setPointSize(16);
-        font1.setBold(true);
-        buttonStart->setFont(font1);
+        QFont font;
+        font.setFamilies({QString::fromUtf8("Comic Sans MS")});
+        font.setPointSize(16);
+        font.setBold(true);
+        buttonStart->setFont(font);
 
         verticalLayout_2->addWidget(buttonStart);
 
@@ -216,7 +165,7 @@ public:
         sizePolicy1.setHeightForWidth(buttonSettings->sizePolicy().hasHeightForWidth());
         buttonSettings->setSizePolicy(sizePolicy1);
         buttonSettings->setMinimumSize(QSize(240, 0));
-        buttonSettings->setFont(font1);
+        buttonSettings->setFont(font);
 
         verticalLayout_2->addWidget(buttonSettings);
 
@@ -226,7 +175,7 @@ public:
         sizePolicy1.setHeightForWidth(buttonaAbout->sizePolicy().hasHeightForWidth());
         buttonaAbout->setSizePolicy(sizePolicy1);
         buttonaAbout->setMinimumSize(QSize(240, 0));
-        buttonaAbout->setFont(font1);
+        buttonaAbout->setFont(font);
 
         verticalLayout_2->addWidget(buttonaAbout);
 
@@ -236,7 +185,7 @@ public:
         sizePolicy1.setHeightForWidth(buttonExit->sizePolicy().hasHeightForWidth());
         buttonExit->setSizePolicy(sizePolicy1);
         buttonExit->setMinimumSize(QSize(240, 0));
-        buttonExit->setFont(font1);
+        buttonExit->setFont(font);
         buttonExit->setCursor(QCursor(Qt::CursorShape::ArrowCursor));
 
         verticalLayout_2->addWidget(buttonExit);
@@ -248,18 +197,28 @@ public:
 
         horizontalLayout_8->addItem(horizontalSpacer_7);
 
-
-        verticalLayout_6->addWidget(widget_3);
-
-
-        gridLayout->addLayout(verticalLayout_6, 0, 0, 1, 1);
-
+        pictureMain = new QLabel(pageMenu);
+        pictureMain->setObjectName("pictureMain");
+        pictureMain->setEnabled(true);
+        pictureMain->setGeometry(QRect(230, -80, 520, 520));
+        sizePolicy.setHeightForWidth(pictureMain->sizePolicy().hasHeightForWidth());
+        pictureMain->setSizePolicy(sizePolicy);
+        pictureMain->setMinimumSize(QSize(520, 520));
+        pictureMain->setMaximumSize(QSize(520, 520));
+        QFont font1;
+        font1.setFamilies({QString::fromUtf8("Comic Sans MS")});
+        font1.setPointSize(48);
+        font1.setBold(true);
+        pictureMain->setFont(font1);
+        pictureMain->setToolTipDuration(-1);
+        pictureMain->setLayoutDirection(Qt::LayoutDirection::LeftToRight);
+        pictureMain->setAlignment(Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignTop);
         stackedWidget->addWidget(pageMenu);
         pageGame = new QWidget();
         pageGame->setObjectName("pageGame");
         keyboardWidget = new QWidget(pageGame);
         keyboardWidget->setObjectName("keyboardWidget");
-        keyboardWidget->setGeometry(QRect(0, 486, 961, 191));
+        keyboardWidget->setGeometry(QRect(10, 530, 961, 211));
         gridLayout_3 = new QGridLayout(keyboardWidget);
         gridLayout_3->setSpacing(7);
         gridLayout_3->setObjectName("gridLayout_3");
@@ -528,84 +487,53 @@ public:
         gridLayout_3->setRowMinimumHeight(3, 1);
         gridLayout_3->setRowMinimumHeight(4, 1);
         gridLayout_3->setRowMinimumHeight(5, 1);
-        layoutWidget = new QWidget(pageGame);
-        layoutWidget->setObjectName("layoutWidget");
-        layoutWidget->setGeometry(QRect(2, 1, 961, 461));
-        horizontalLayout_3 = new QHBoxLayout(layoutWidget);
-        horizontalLayout_3->setObjectName("horizontalLayout_3");
-        horizontalLayout_3->setContentsMargins(0, 0, 0, 0);
-        verticalLayout_5 = new QVBoxLayout();
-        verticalLayout_5->setObjectName("verticalLayout_5");
-        pictureGame = new QLabel(layoutWidget);
-        pictureGame->setObjectName("pictureGame");
-        sizePolicy1.setHeightForWidth(pictureGame->sizePolicy().hasHeightForWidth());
-        pictureGame->setSizePolicy(sizePolicy1);
-        pictureGame->setMaximumSize(QSize(1000, 1000));
-
-        verticalLayout_5->addWidget(pictureGame);
-
-        verticalSpacer = new QSpacerItem(20, 50, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Fixed);
-
-        verticalLayout_5->addItem(verticalSpacer);
-
-
-        horizontalLayout_3->addLayout(verticalLayout_5);
-
-        verticalLayout_4 = new QVBoxLayout();
-        verticalLayout_4->setObjectName("verticalLayout_4");
-        horizontalLayout_4 = new QHBoxLayout();
-        horizontalLayout_4->setObjectName("horizontalLayout_4");
-        horizontalSpacer_4 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
-
-        horizontalLayout_4->addItem(horizontalSpacer_4);
-
-        buttonPause = new QPushButton(layoutWidget);
-        buttonPause->setObjectName("buttonPause");
-        buttonPause->setEnabled(true);
-        sizePolicy.setHeightForWidth(buttonPause->sizePolicy().hasHeightForWidth());
-        buttonPause->setSizePolicy(sizePolicy);
-        buttonPause->setMinimumSize(QSize(80, 40));
-        buttonPause->setMaximumSize(QSize(80, 40));
-        buttonPause->setSizeIncrement(QSize(0, 0));
-        buttonPause->setFont(font1);
-
-        horizontalLayout_4->addWidget(buttonPause);
-
-
-        verticalLayout_4->addLayout(horizontalLayout_4);
-
-        widget = new QWidget(layoutWidget);
+        labelWordMask = new QLabel(pageGame);
+        labelWordMask->setObjectName("labelWordMask");
+        labelWordMask->setGeometry(QRect(350, 430, 600, 60));
+        sizePolicy.setHeightForWidth(labelWordMask->sizePolicy().hasHeightForWidth());
+        labelWordMask->setSizePolicy(sizePolicy);
+        labelWordMask->setMinimumSize(QSize(600, 60));
+        labelWordMask->setMaximumSize(QSize(450, 60));
+        QFont font3;
+        font3.setFamilies({QString::fromUtf8("Comic Sans MS")});
+        font3.setPointSize(20);
+        font3.setBold(false);
+        font3.setStrikeOut(false);
+        font3.setKerning(true);
+        labelWordMask->setFont(font3);
+        labelWordMask->setAutoFillBackground(false);
+        labelWordMask->setScaledContents(false);
+        labelWordMask->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
+        widget = new QWidget(pageGame);
         widget->setObjectName("widget");
+        widget->setGeometry(QRect(490, 50, 471, 361));
         sizePolicy.setHeightForWidth(widget->sizePolicy().hasHeightForWidth());
         widget->setSizePolicy(sizePolicy);
         widget->setLayoutDirection(Qt::LayoutDirection::LeftToRight);
-        verticalLayout_3 = new QVBoxLayout(widget);
-        verticalLayout_3->setObjectName("verticalLayout_3");
         labelCurrentDifficulty = new QLabel(widget);
         labelCurrentDifficulty->setObjectName("labelCurrentDifficulty");
-        QFont font3;
-        font3.setFamilies({QString::fromUtf8("Comic Sans MS")});
-        font3.setPointSize(12);
-        font3.setBold(true);
-        labelCurrentDifficulty->setFont(font3);
+        labelCurrentDifficulty->setGeometry(QRect(130, 0, 337, 28));
+        QFont font4;
+        font4.setFamilies({QString::fromUtf8("Comic Sans MS")});
+        font4.setPointSize(10);
+        font4.setBold(true);
+        labelCurrentDifficulty->setFont(font4);
         labelCurrentDifficulty->setLayoutDirection(Qt::LayoutDirection::LeftToRight);
         labelCurrentDifficulty->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
-
-        verticalLayout_3->addWidget(labelCurrentDifficulty);
-
         labelAttemptsLeft = new QLabel(widget);
         labelAttemptsLeft->setObjectName("labelAttemptsLeft");
-        labelAttemptsLeft->setFont(font3);
+        labelAttemptsLeft->setGeometry(QRect(260, 40, 202, 28));
+        labelAttemptsLeft->setFont(font4);
         labelAttemptsLeft->setLayoutDirection(Qt::LayoutDirection::LeftToRight);
         labelAttemptsLeft->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
-
-        verticalLayout_3->addWidget(labelAttemptsLeft);
-
-        verticalSpacer_2 = new QSpacerItem(20, 17, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
-
-        verticalLayout_3->addItem(verticalSpacer_2);
-
-        labelDefinition = new QLabel(widget);
+        widget1 = new QWidget(widget);
+        widget1->setObjectName("widget1");
+        widget1->setGeometry(QRect(11, 80, 452, 251));
+        verticalLayout_3 = new QVBoxLayout(widget1);
+        verticalLayout_3->setSpacing(18);
+        verticalLayout_3->setObjectName("verticalLayout_3");
+        verticalLayout_3->setContentsMargins(0, 0, 0, 0);
+        labelDefinition = new QLabel(widget1);
         labelDefinition->setObjectName("labelDefinition");
         QSizePolicy sizePolicy3(QSizePolicy::Policy::Preferred, QSizePolicy::Policy::Fixed);
         sizePolicy3.setHorizontalStretch(0);
@@ -615,11 +543,11 @@ public:
         labelDefinition->setMinimumSize(QSize(450, 110));
         labelDefinition->setMaximumSize(QSize(450, 110));
         labelDefinition->setSizeIncrement(QSize(0, 0));
-        QFont font4;
-        font4.setFamilies({QString::fromUtf8("Comic Sans MS")});
-        font4.setPointSize(10);
-        font4.setBold(false);
-        labelDefinition->setFont(font4);
+        QFont font5;
+        font5.setFamilies({QString::fromUtf8("Comic Sans MS")});
+        font5.setPointSize(10);
+        font5.setBold(false);
+        labelDefinition->setFont(font5);
         labelDefinition->setLayoutDirection(Qt::LayoutDirection::LeftToRight);
         labelDefinition->setFrameShape(QFrame::Shape::Box);
         labelDefinition->setFrameShadow(QFrame::Shadow::Plain);
@@ -630,108 +558,98 @@ public:
 
         verticalLayout_3->addWidget(labelDefinition);
 
-        verticalSpacer_3 = new QSpacerItem(20, 17, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
-
-        verticalLayout_3->addItem(verticalSpacer_3);
-
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setSpacing(0);
         horizontalLayout_2->setObjectName("horizontalLayout_2");
-        horizontalSpacer = new QSpacerItem(200, 20, QSizePolicy::Policy::Fixed, QSizePolicy::Policy::Minimum);
+        horizontalSpacer = new QSpacerItem(210, 20, QSizePolicy::Policy::Fixed, QSizePolicy::Policy::Minimum);
 
         horizontalLayout_2->addItem(horizontalSpacer);
 
-        horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+        horizontalSpacer_3 = new QSpacerItem(20, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
 
         horizontalLayout_2->addItem(horizontalSpacer_3);
 
-        buttonShowDefinition = new QPushButton(widget);
+        buttonShowDefinition = new QPushButton(widget1);
         buttonShowDefinition->setObjectName("buttonShowDefinition");
         sizePolicy.setHeightForWidth(buttonShowDefinition->sizePolicy().hasHeightForWidth());
         buttonShowDefinition->setSizePolicy(sizePolicy);
-        buttonShowDefinition->setMinimumSize(QSize(200, 40));
+        buttonShowDefinition->setMinimumSize(QSize(210, 40));
         buttonShowDefinition->setMaximumSize(QSize(200, 60));
-        QFont font5;
-        font5.setFamilies({QString::fromUtf8("Comic Sans MS")});
-        font5.setPointSize(10);
-        font5.setBold(true);
-        buttonShowDefinition->setFont(font5);
+        QFont font6;
+        font6.setFamilies({QString::fromUtf8("Comic Sans MS")});
+        font6.setPointSize(8);
+        font6.setBold(true);
+        buttonShowDefinition->setFont(font6);
 
         horizontalLayout_2->addWidget(buttonShowDefinition);
 
-        horizontalLayout_2->setStretch(1, 1);
 
         verticalLayout_3->addLayout(horizontalLayout_2);
 
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setSpacing(0);
         horizontalLayout->setObjectName("horizontalLayout");
-        buttonBackToMenu = new QPushButton(widget);
+        buttonBackToMenu = new QPushButton(widget1);
         buttonBackToMenu->setObjectName("buttonBackToMenu");
         QSizePolicy sizePolicy4(QSizePolicy::Policy::Fixed, QSizePolicy::Policy::Minimum);
         sizePolicy4.setHorizontalStretch(0);
         sizePolicy4.setVerticalStretch(0);
         sizePolicy4.setHeightForWidth(buttonBackToMenu->sizePolicy().hasHeightForWidth());
         buttonBackToMenu->setSizePolicy(sizePolicy4);
-        buttonBackToMenu->setMinimumSize(QSize(200, 40));
+        buttonBackToMenu->setMinimumSize(QSize(210, 40));
         buttonBackToMenu->setMaximumSize(QSize(200, 60));
         buttonBackToMenu->setSizeIncrement(QSize(0, 60));
-        buttonBackToMenu->setFont(font5);
+        buttonBackToMenu->setFont(font6);
 
         horizontalLayout->addWidget(buttonBackToMenu);
 
-        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+        horizontalSpacer_2 = new QSpacerItem(20, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
 
         horizontalLayout->addItem(horizontalSpacer_2);
 
-        buttonNewGame = new QPushButton(widget);
+        buttonNewGame = new QPushButton(widget1);
         buttonNewGame->setObjectName("buttonNewGame");
         QSizePolicy sizePolicy5(QSizePolicy::Policy::Fixed, QSizePolicy::Policy::Fixed);
         sizePolicy5.setHorizontalStretch(0);
         sizePolicy5.setVerticalStretch(60);
         sizePolicy5.setHeightForWidth(buttonNewGame->sizePolicy().hasHeightForWidth());
         buttonNewGame->setSizePolicy(sizePolicy5);
-        buttonNewGame->setMinimumSize(QSize(200, 40));
+        buttonNewGame->setMinimumSize(QSize(210, 40));
         buttonNewGame->setMaximumSize(QSize(220, 60));
-        buttonNewGame->setFont(font5);
+        buttonNewGame->setFont(font6);
 
         horizontalLayout->addWidget(buttonNewGame);
 
 
         verticalLayout_3->addLayout(horizontalLayout);
 
-        labelWordMask = new QLabel(widget);
-        labelWordMask->setObjectName("labelWordMask");
-        sizePolicy.setHeightForWidth(labelWordMask->sizePolicy().hasHeightForWidth());
-        labelWordMask->setSizePolicy(sizePolicy);
-        labelWordMask->setMinimumSize(QSize(450, 60));
-        labelWordMask->setMaximumSize(QSize(450, 60));
-        QFont font6;
-        font6.setFamilies({QString::fromUtf8("Comic Sans MS")});
-        font6.setPointSize(23);
-        font6.setBold(false);
-        font6.setStrikeOut(false);
-        font6.setKerning(true);
-        labelWordMask->setFont(font6);
-        labelWordMask->setAutoFillBackground(false);
-        labelWordMask->setScaledContents(false);
-        labelWordMask->setAlignment(Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter);
-
-        verticalLayout_3->addWidget(labelWordMask);
-
-
-        verticalLayout_4->addWidget(widget);
-
-
-        horizontalLayout_3->addLayout(verticalLayout_4);
-
-        horizontalLayout_3->setStretch(0, 1);
+        pictureGame = new QLabel(pageGame);
+        pictureGame->setObjectName("pictureGame");
+        pictureGame->setGeometry(QRect(-10, -30, 461, 511));
+        sizePolicy1.setHeightForWidth(pictureGame->sizePolicy().hasHeightForWidth());
+        pictureGame->setSizePolicy(sizePolicy1);
+        pictureGame->setMaximumSize(QSize(1000, 1000));
+        buttonPause = new QPushButton(pageGame);
+        buttonPause->setObjectName("buttonPause");
+        buttonPause->setEnabled(true);
+        buttonPause->setGeometry(QRect(860, 0, 80, 40));
+        sizePolicy.setHeightForWidth(buttonPause->sizePolicy().hasHeightForWidth());
+        buttonPause->setSizePolicy(sizePolicy);
+        buttonPause->setMinimumSize(QSize(80, 40));
+        buttonPause->setMaximumSize(QSize(80, 40));
+        buttonPause->setSizeIncrement(QSize(0, 0));
+        buttonPause->setFont(font);
         stackedWidget->addWidget(pageGame);
+        widget->raise();
+        pictureGame->raise();
+        keyboardWidget->raise();
+        labelWordMask->raise();
+        buttonPause->raise();
         pageAbout = new QWidget();
         pageAbout->setObjectName("pageAbout");
         groupBox = new QGroupBox(pageAbout);
         groupBox->setObjectName("groupBox");
-        groupBox->setGeometry(QRect(170, 60, 651, 481));
+        groupBox->setGeometry(QRect(170, 60, 701, 531));
         QFont font7;
         font7.setFamilies({QString::fromUtf8("Comic Sans MS")});
         font7.setPointSize(20);
@@ -739,76 +657,64 @@ public:
         groupBox->setFont(font7);
         label = new QLabel(groupBox);
         label->setObjectName("label");
-        label->setGeometry(QRect(40, 80, 581, 341));
+        label->setGeometry(QRect(40, 40, 631, 481));
         QFont font8;
         font8.setFamilies({QString::fromUtf8("Comic Sans MS")});
-        font8.setPointSize(14);
+        font8.setPointSize(12);
         font8.setBold(false);
         label->setFont(font8);
         label->setWordWrap(true);
         stackedWidget->addWidget(pageAbout);
         pageSettings = new QWidget();
         pageSettings->setObjectName("pageSettings");
-        layoutWidget1 = new QWidget(pageSettings);
-        layoutWidget1->setObjectName("layoutWidget1");
-        layoutWidget1->setGeometry(QRect(240, 190, 451, 281));
-        verticalLayout = new QVBoxLayout(layoutWidget1);
+        layoutWidget = new QWidget(pageSettings);
+        layoutWidget->setObjectName("layoutWidget");
+        layoutWidget->setGeometry(QRect(260, 190, 451, 281));
+        verticalLayout = new QVBoxLayout(layoutWidget);
         verticalLayout->setSpacing(20);
         verticalLayout->setObjectName("verticalLayout");
         verticalLayout->setContentsMargins(0, 0, 0, 0);
-        buttonDifficulty = new QPushButton(layoutWidget1);
+        buttonDifficulty = new QPushButton(layoutWidget);
         buttonDifficulty->setObjectName("buttonDifficulty");
         buttonDifficulty->setEnabled(true);
         sizePolicy1.setHeightForWidth(buttonDifficulty->sizePolicy().hasHeightForWidth());
         buttonDifficulty->setSizePolicy(sizePolicy1);
-        buttonDifficulty->setFont(font1);
+        buttonDifficulty->setFont(font);
 
         verticalLayout->addWidget(buttonDifficulty);
 
-        buttonAddWord = new QPushButton(layoutWidget1);
+        buttonAddWord = new QPushButton(layoutWidget);
         buttonAddWord->setObjectName("buttonAddWord");
         buttonAddWord->setEnabled(true);
         sizePolicy1.setHeightForWidth(buttonAddWord->sizePolicy().hasHeightForWidth());
         buttonAddWord->setSizePolicy(sizePolicy1);
-        buttonAddWord->setFont(font1);
+        buttonAddWord->setFont(font);
 
         verticalLayout->addWidget(buttonAddWord);
 
-        buttonResetDict = new QPushButton(layoutWidget1);
+        buttonResetDict = new QPushButton(layoutWidget);
         buttonResetDict->setObjectName("buttonResetDict");
         buttonResetDict->setEnabled(true);
         sizePolicy1.setHeightForWidth(buttonResetDict->sizePolicy().hasHeightForWidth());
         buttonResetDict->setSizePolicy(sizePolicy1);
-        buttonResetDict->setFont(font1);
+        buttonResetDict->setFont(font);
 
         verticalLayout->addWidget(buttonResetDict);
 
         stackedWidget->addWidget(pageSettings);
-        layoutWidget2 = new QWidget(centralwidget);
-        layoutWidget2->setObjectName("layoutWidget2");
-        layoutWidget2->setGeometry(QRect(11, 11, 961, 42));
-        horizontalLayout_5 = new QHBoxLayout(layoutWidget2);
-        horizontalLayout_5->setObjectName("horizontalLayout_5");
-        horizontalLayout_5->setContentsMargins(0, 0, 0, 0);
-        buttonBack = new QPushButton(layoutWidget2);
+        buttonBack = new QPushButton(centralwidget);
         buttonBack->setObjectName("buttonBack");
         buttonBack->setEnabled(true);
+        buttonBack->setGeometry(QRect(20, 12, 80, 40));
         sizePolicy.setHeightForWidth(buttonBack->sizePolicy().hasHeightForWidth());
         buttonBack->setSizePolicy(sizePolicy);
         buttonBack->setMinimumSize(QSize(80, 40));
         buttonBack->setMaximumSize(QSize(80, 40));
-        buttonBack->setFont(font1);
-
-        horizontalLayout_5->addWidget(buttonBack);
-
-        horizontalSpacer_5 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
-
-        horizontalLayout_5->addItem(horizontalSpacer_5);
-
+        buttonBack->setFont(font);
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 1000, 21));
+        menubar->setGeometry(QRect(0, 0, 1000, 25));
         menuhangman = new QMenu(menubar);
         menuhangman->setObjectName("menuhangman");
         MainWindow->setMenuBar(menubar);
@@ -821,7 +727,7 @@ public:
         retranslateUi(MainWindow);
         QObject::connect(buttonExit, &QPushButton::clicked, MainWindow, qOverload<>(&QMainWindow::close));
 
-        stackedWidget->setCurrentIndex(3);
+        stackedWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -830,11 +736,11 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
-        pictureMain->setText(QString());
         buttonStart->setText(QCoreApplication::translate("MainWindow", "START GAME", nullptr));
         buttonSettings->setText(QCoreApplication::translate("MainWindow", "SETTINGS", nullptr));
         buttonaAbout->setText(QCoreApplication::translate("MainWindow", "ABOUT", nullptr));
         buttonExit->setText(QCoreApplication::translate("MainWindow", "EXIT", nullptr));
+        pictureMain->setText(QString());
         buttonF->setText(QCoreApplication::translate("MainWindow", "F", nullptr));
         buttonP->setText(QCoreApplication::translate("MainWindow", "P", nullptr));
         buttonY->setText(QCoreApplication::translate("MainWindow", "Y", nullptr));
@@ -862,19 +768,17 @@ public:
         buttonX->setText(QCoreApplication::translate("MainWindow", "X", nullptr));
         buttonJ->setText(QCoreApplication::translate("MainWindow", "J", nullptr));
         button_->setText(QCoreApplication::translate("MainWindow", "_", nullptr));
-        pictureGame->setText(QString());
-        buttonPause->setText(QCoreApplication::translate("MainWindow", "||", nullptr));
+        labelWordMask->setText(QCoreApplication::translate("MainWindow", " _ _ _ _ _ _ _ _ _ _ V E C _ _ R", nullptr));
         labelCurrentDifficulty->setText(QCoreApplication::translate("MainWindow", "CURRENT DIFFICULTY: MEDIUM", nullptr));
         labelAttemptsLeft->setText(QCoreApplication::translate("MainWindow", "ATTEMPTS LEFT: 5", nullptr));
         labelDefinition->setText(QCoreApplication::translate("MainWindow", "Also called header guard. A pattern using preprocessor directives (#ifndef, #define, #endif) at the top of a header file to prevent multiple inclusions of the same header in one compilation.aaaaaaa fddddddd a A FFFFFF a ssdf qew q ED G ERTGWFW QDWSEF  QFWFG", nullptr));
         buttonShowDefinition->setText(QCoreApplication::translate("MainWindow", "SHOW DEFINITION", nullptr));
         buttonBackToMenu->setText(QCoreApplication::translate("MainWindow", "BACK TO MENU", nullptr));
         buttonNewGame->setText(QCoreApplication::translate("MainWindow", "NEW GAME", nullptr));
-        labelWordMask->setText(QCoreApplication::translate("MainWindow", " _ _ _ _ _ _ _ _ _ _ V E C _ _ R", nullptr));
+        pictureGame->setText(QString());
+        buttonPause->setText(QCoreApplication::translate("MainWindow", "||", nullptr));
         groupBox->setTitle(QCoreApplication::translate("MainWindow", "ABOUT THE GAME", nullptr));
-        label->setText(QCoreApplication::translate("MainWindow", "Text (WSE: TXT),[4] previously known as LiveChat Software, is a Polish software company specializing in customer service and artificial intelligence solutions.[5] Based in Wroc\305\202aw, it offers a suite of tools for B2B and B2C communication, including popular platforms like LiveChat, ChatBot, and HelpDesk.[6] The company is publicly listed on the Warsaw Stock Exchange.[7][8]\n"
-"\n"
-"The company was founded in Wroclaw, Poland in 2002, and also has US offices in Boston, Massachusetts. In 2023, the company rebranded from \342\200\234LiveChat Software\342\200\235 to \342\200\234Text\342\200\235 to reflect its broadened focus on artificial intelligence and e-commerce solutions.[9]", nullptr));
+        label->setText(QString());
         buttonDifficulty->setText(QCoreApplication::translate("MainWindow", "SELECT DIFFICULTY", nullptr));
         buttonAddWord->setText(QCoreApplication::translate("MainWindow", "ADD CUSTOM WORD", nullptr));
         buttonResetDict->setText(QCoreApplication::translate("MainWindow", "RESTORE DEFAULT WORDS", nullptr));

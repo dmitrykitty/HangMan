@@ -1,6 +1,5 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include "windows/difficultydialog.h"
 #include <QMessageBox>
 #include <QPushButton>
 #include <QPixmap>
@@ -11,6 +10,7 @@ MainWindow::MainWindow(QWidget* parent): QMainWindow(parent), ui(new Ui::MainWin
 
     ui->buttonBack->setVisible(false);
     ui->buttonPause->setVisible(false);
+    ui->label->setText(aboutText);
 
     ui->stackedWidget->setCurrentIndex(PageMenu);
     //ui->buttonShowDefinition->setHidden(true);
@@ -42,7 +42,7 @@ MainWindow::MainWindow(QWidget* parent): QMainWindow(parent), ui(new Ui::MainWin
     connect(ui->buttonResetDict, &QPushButton::clicked,
             &controller_, &GameController::removeAllUserWords);
     connect(&controller_, &GameController::userWordsRemoved,
-        this, &MainWindow::onUserWordsRemoved);
+            this, &MainWindow::onUserWordsRemoved);
     connect(ui->buttonDifficulty, &QPushButton::clicked, this, &MainWindow::difficultyClicked);
     connect(ui->buttonAddWord, &QPushButton::clicked, this, &MainWindow::addWordClicked);
     connect(ui->buttonSettings, &QPushButton::clicked, this, &MainWindow::settingsClicked);
@@ -235,12 +235,14 @@ void MainWindow::updateDifficultyLabel() const {
 void MainWindow::onUserWordsRemoved(bool success) {
     QMessageBox msg;
     msg.setFont(QFont("Comic Sans MS", 12));
-    msg.setIcon(success ? QMessageBox::Information
-                       : QMessageBox::Warning);
-    msg.setWindowTitle(success ? tr("Dictionary Cleared")
-                               : tr("Error"));
+    msg.setIcon(success
+                    ? QMessageBox::Information
+                    : QMessageBox::Warning);
+    msg.setWindowTitle(success
+                           ? tr("Dictionary Cleared")
+                           : tr("Error"));
     msg.setText(success
-                ? tr("All user-added words have been removed.")
-                : tr("Failed to remove user-added words."));
+                    ? tr("All user-added words have been removed.")
+                    : tr("Failed to remove user-added words."));
     msg.exec();
 }

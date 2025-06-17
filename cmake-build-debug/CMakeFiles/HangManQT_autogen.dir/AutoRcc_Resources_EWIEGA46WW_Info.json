@@ -9,6 +9,7 @@
 	"INCLUDE_DIR" : "D:/study/AGH/C_plus_projects/HangManQT/cmake-build-debug/HangManQT_autogen/include",
 	"INPUTS" : 
 	[
+		"D:/study/AGH/C_plus_projects/HangManQT/GUI/Resources/img/hangman_icon_256.png",
 		"D:/study/AGH/C_plus_projects/HangManQT/GUI/Resources/img/GameImg1.png",
 		"D:/study/AGH/C_plus_projects/HangManQT/GUI/Resources/img/mainWindowPNGImage.png",
 		"D:/study/AGH/C_plus_projects/HangManQT/GUI/Resources/img/GameImg2.png",

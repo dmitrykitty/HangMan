@@ -1,7 +1,5 @@
 D:/study/AGH/C_plus_projects/HangManQT/cmake-build-debug/HangManQT_autogen/H3Q7Z7QLNK/moc_GameController.cpp: D:/study/AGH/C_plus_projects/HangManQT/GameController/GameController.h \
   D:/study/AGH/C_plus_projects/HangManQT/cmake-build-debug/HangManQT_autogen/moc_predefs.h \
-  C:/Qt/6.9.0/mingw_64/include/QtCore/QObject \
-  C:/Qt/6.9.0/mingw_64/include/QtCore/QString \
   C:/Qt/6.9.0/mingw_64/include/QtCore/q17memory.h \
   C:/Qt/6.9.0/mingw_64/include/QtCore/q20functional.h \
   C:/Qt/6.9.0/mingw_64/include/QtCore/q20memory.h \

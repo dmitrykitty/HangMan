@@ -1,8 +1,6 @@
 #pragma once
 
-#include <QMainWindow>
 #include <ui_mainwindow.h>
-#include <QSqlQueryModel>
 #include "GameController/GameController.h"
 
 namespace Ui {
@@ -21,6 +19,19 @@ class MainWindow : public QMainWindow {
         PageSettings = 3
     };
 
+    static inline const QString aboutText =
+    "<b>HangMan Qt — wersja 1.0</b><br/>"
+    "Autor: Dmitry_kitty<br/>"
+    "Repozytorium: <a href=\"https://github.com/Dmitry_kitty/MyString\">HangMan</a><br/>"
+    "Zapraszam do lajkowania:)<br/><br/>"
+    "Klasyczna gra w wisielca, wzbogacona o:<br/>"
+    "• Trzy poziomy trudności (Łatwy, Średni, Trudny)<br/>"
+    "• Edukacyjny słownik pojęć C++<br/>"
+    "• Możliwość dodawania własnych słów i definicji<br/>"
+    "• Intuicyjny interfejs Qt z obrazkami wisielca<br/>"
+    "• Ustawienia: czyszczenie listy słów, zmiana poziomu trudności<br/><br/>"
+    "© 2025 Dmitry_kitty";
+
     const std::array<QString, 8> hangmanImages = {
         QStringLiteral(":/img/GUI/Resources/img/GameImg0.png"),
         QStringLiteral(":/img/GUI/Resources/img/GameImg1.png"),
@@ -32,7 +43,7 @@ class MainWindow : public QMainWindow {
         QStringLiteral(":/img/GUI/Resources/img/GameWonImg.png")
     };
 
-    const int sz = static_cast<int>(hangmanImages.size());
+    const int sz = hangmanImages.size();
 
 public:
     explicit MainWindow(QWidget* parent = nullptr);

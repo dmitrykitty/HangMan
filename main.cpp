@@ -12,13 +12,16 @@ int main(int argc, char *argv[]) {
 
     QApplication app(argc, argv);
     QCoreApplication::addLibraryPath(QCoreApplication::applicationDirPath());
+    app.setWindowIcon(QIcon(":/img/GUI/Resources/img/hangman_icon_256.png"));
 
     QString exeDir = QCoreApplication::applicationDirPath();
-    // jeżeli Twój .exe trafia do cmake-build-debug/ to poniżej jest to samo
     QString dbPath  = QDir(exeDir).absoluteFilePath("hangman.db");
 
-    if (!DataBaseManager::instance().openDatabase("hangman.db")) {
-        QMessageBox::critical(nullptr, "Error", "Cannot open database");
+    if (!DataBaseManager::instance().openDatabase(dbPath)) {
+        QMessageBox msg;
+        msg.setWindowTitle("Error");
+        msg.setText("Cannot open database at " + dbPath);
+        msg.exec();
         return 1;
     }
 

@@ -1,7 +1,6 @@
 #ifndef DATABASEMANAGER_H
 #define DATABASEMANAGER_H
 
-#include <QString>
 #include <QSqlDatabase>
 
 using WordInfo = std::tuple<QString, QString, int>;

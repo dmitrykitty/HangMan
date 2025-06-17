@@ -19,8 +19,8 @@ void GameController::startNewGame() {
     }
     currentWordId_ = id;
     game_ = Game();
-    game_.setSecretWord(newWord);
-    game_.setDefinition(newDefinition);
+    game_.setSecretWord(std::move(newWord));
+    game_.setDefinition(std::move(newDefinition));
 
     emit displayUpdated(game_.getCurrentDisplay());
     emit descriptionUpdate(newDefinition);

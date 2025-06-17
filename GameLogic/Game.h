@@ -1,5 +1,4 @@
 #pragma once
-
 #include <qstring.h>
 #include <utility>
 
@@ -21,7 +20,7 @@ public:
     //Getters
     static constexpr int getMaxError() { return ERRORMAX; }
     [[nodiscard]] int errors() const { return errorCount_; }
-    QString& getCurrentDisplay() { return currentDisplay_; }
+    [[nodiscard]] const QString& getCurrentDisplay() const { return currentDisplay_; }
     [[nodiscard]] QString getSecretWord() const;
     [[nodiscard]] QString getDefinitionWord() const;
 

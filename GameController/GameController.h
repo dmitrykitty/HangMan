@@ -1,7 +1,6 @@
 #pragma once
 
-#include <QObject>
-#include <QString>
+
 #include "GameLogic/Game.h"
 #include "DataBase/DataBaseManager.h"
 #include <QSqlQueryModel>
