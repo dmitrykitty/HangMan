@@ -10,5 +10,6 @@
         <file>GUI/Resources/img/GameImg5.png</file>
         <file>GUI/Resources/img/GameLoseImg.png</file>
         <file>GUI/Resources/img/GameWonImg.png</file>
+        <file>GUI/Resources/img/hangman_icon_256.png</file>
     </qresource>
 </RCC>

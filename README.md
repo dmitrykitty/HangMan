@@ -102,6 +102,21 @@ appear in `medium.csv` with a short definition. The game randomly selects a word
 SQLite database (which was populated by the provided `load_words.py` script). 
 If you add a custom word, it’s stored in the database with `word_type='user'`.
 ## Game process:
+<img src="readme_assets/main_menu.png" alt="Main menu" width="400" />
+
+*The main menu of the Hangman game 
+(custom GUI with Start Game, Settings, About, Exit)*
+
+<img src="readme_assets/game_page.png" alt="Game menu" width="400" />
+
+*Gameplay view: hangman drawing, difficulty & attempts panel with hint and 
+“Show Definition”, plus an on-screen keyboard where used letters are dimmed.*
+
+<img src="readme_assets/add_word_menu.png" alt="Add Word menu" width="400" />
+
+*“Add Custom Word” dialog with fields for word, definition, difficulty 
+(Easy / Medium / Hard) and Cancel / Add buttons.*
+
 
 ## Building and Running:
 1. **Qt Creator:** Open the folder HangMan in Qt Creator (which will detect the `CMakeLists.txt`). 
